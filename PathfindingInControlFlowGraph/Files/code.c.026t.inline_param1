@@ -1,0 +1,114 @@
+
+;; Function main (main, funcdef_no=14, decl_uid=2271, cgraph_uid=14, symbol_order=14)
+
+
+Analyzing function body size: main
+
+Inline summary for main/14
+  self time:       30
+  global time:     0
+  self size:       31
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:29,000000, time:30,000000, predicate:(true)
+    size:2,000000, time:0,000000, predicate:(not inlined)
+  calls:
+
+main ()
+{
+  int largest;
+  int tmp;
+  int last;
+  int first;
+  int T[5];
+  int D.2297;
+  int D.2295;
+  int D.2294;
+  int D.2291;
+  int D.2290;
+  int D.2287;
+  int D.2286;
+  int D.2285;
+  int D.2282;
+  int _13;
+  int _15;
+  int _16;
+  int _17;
+  int _19;
+  int _20;
+  int _22;
+  int _26;
+  int _29;
+
+  <bb 2>:
+  T[0] = 1;
+  T[1] = 2;
+  T[2] = 3;
+  T[3] = 4;
+  T[4] = 5;
+  first_11 = 1;
+  last_12 = 4;
+  _13 = first_11 * 2;
+  largest_14 = _13 + 1;
+  goto <bb 9>;
+
+  <bb 3>:
+  if (largest_3 < last_12)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+  <bb 4>:
+  _15 = T[largest_3];
+  _16 = largest_3 + 1;
+  _17 = T[_16];
+  if (_15 < _17)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  largest_18 = largest_3 + 1;
+
+  <bb 6>:
+  # largest_2 = PHI <largest_3(3), largest_3(4), largest_18(5)>
+  _19 = T[first_1];
+  _20 = T[largest_2];
+  if (_19 < _20)
+    goto <bb 7>;
+  else
+    goto <bb 8>;
+
+  <bb 7>:
+  tmp_21 = T[first_1];
+  _22 = T[largest_2];
+  T[first_1] = _22;
+  T[largest_2] = tmp_21;
+  first_25 = largest_2;
+  _26 = first_25 * 2;
+  largest_27 = _26 + 1;
+  goto <bb 9>;
+
+  <bb 8>:
+  largest_28 = last_12 + 1;
+
+  <bb 9>:
+  # first_1 = PHI <first_11(2), first_25(7), first_1(8)>
+  # largest_3 = PHI <largest_14(2), largest_27(7), largest_28(8)>
+  if (largest_3 <= last_12)
+    goto <bb 3>;
+  else
+    goto <bb 10>;
+
+  <bb 10>:
+  _29 = 1;
+  T ={v} {CLOBBER};
+
+<L11>:
+  return _29;
+
+}
+
+

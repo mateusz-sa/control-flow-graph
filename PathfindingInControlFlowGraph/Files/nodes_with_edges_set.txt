@@ -1,0 +1,14 @@
+Funkcja | main | zawiera następujące wierzchołki : 
+Wierzchołek | 0 | Jest połaczony z wierzchołkami :  < 2 >  < 1 > 
+Wierzchołek | 2 | Jest połaczony z wierzchołkami :  < 9 > 
+Wierzchołek | 3 | Jest połaczony z wierzchołkami :  < 4 >  < 6 > 
+Wierzchołek | 4 | Jest połaczony z wierzchołkami :  < 5 >  < 6 > 
+Wierzchołek | 5 | Jest połaczony z wierzchołkami :  < 6 > 
+Wierzchołek | 6 | Jest połaczony z wierzchołkami :  < 7 >  < 8 > 
+Wierzchołek | 7 | Jest połaczony z wierzchołkami :  < 9 > 
+Wierzchołek | 8 | Jest połaczony z wierzchołkami :  < 9 > 
+Wierzchołek | 9 | Jest połaczony z wierzchołkami :  < 3 >  < 10 > 
+Wierzchołek | 10 | Jest połaczony z wierzchołkami :  < 11 > 
+Wierzchołek | 11 | Jest połaczony z wierzchołkami :  < 1 > 
+
+

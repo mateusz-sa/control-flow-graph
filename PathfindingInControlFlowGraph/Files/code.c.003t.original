@@ -1,0 +1,171 @@
+
+;; Function getc (null)
+;; enabled by -tree-original
+
+
+{
+  return  --__F->_cnt >= 0 ? (int) (unsigned char) *__F->_ptr++  : _filbuf (__F);
+}
+
+
+;; Function putc (null)
+;; enabled by -tree-original
+
+
+{
+  return  --__F->_cnt >= 0 ? (int) (unsigned char) (*__F->_ptr++  = (char) __c) : _flsbuf (__c, __F);
+}
+
+
+;; Function getchar (null)
+;; enabled by -tree-original
+
+
+{
+  return  --_iob[0]._cnt >= 0 ? (int) (unsigned char) *_iob[0]._ptr++  : _filbuf (&_iob[0]);
+}
+
+
+;; Function putchar (null)
+;; enabled by -tree-original
+
+
+{
+  return  --_iob[1]._cnt >= 0 ? (int) (unsigned char) (*_iob[1]._ptr++  = (char) __c) : _flsbuf (__c, &_iob[1]);
+}
+
+
+;; Function _get_output_format (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_get_output_format ();
+}
+
+
+;; Function _set_output_format (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_set_output_format (__style);
+}
+
+
+;; Function _get_printf_count_output (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_get_printf_count_output ();
+}
+
+
+;; Function _set_printf_count_output (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_set_printf_count_output (__mode);
+}
+
+
+;; Function fopen64 (null)
+;; enabled by -tree-original
+
+
+{
+  return fopen (filename, mode);
+}
+
+
+;; Function ftello64 (null)
+;; enabled by -tree-original
+
+
+{
+  fpos_t __pos;
+
+    fpos_t __pos;
+  return fgetpos (stream, &__pos) == 0 ? (__off64_t) __pos : -1;
+}
+
+
+;; Function mkstemp (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_mkstemp (0, __filename_template);
+}
+
+
+;; Function mkdtemp (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_mkdtemp (__dirname_template);
+}
+
+
+;; Function setenv (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_setenv (__n, __v, __f);
+}
+
+
+;; Function unsetenv (null)
+;; enabled by -tree-original
+
+
+{
+  return __mingw_setenv (__name, 0B, 1);
+}
+
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  int T[5] = {1, 2, 3, 4, 5};
+  int first = 1;
+  int last = 4;
+  int tmp;
+  int largest = first * 2 + 1;
+
+    int T[5] = {1, 2, 3, 4, 5};
+    int first = 1;
+    int last = 4;
+    int tmp;
+    int largest = first * 2 + 1;
+  goto <D.2279>;
+  <D.2278>:;
+  if (largest < last && T[largest] < T[largest + 1])
+    {
+      largest++ ;
+    }
+  if (T[first] < T[largest])
+    {
+      tmp = T[first];
+      T[first] = T[largest];
+      T[largest] = tmp;
+      first = largest;
+      largest = first * 2 + 1;
+    }
+  else
+    {
+      largest = last + 1;
+    }
+  <D.2279>:;
+  if (largest <= last) goto <D.2278>; else goto <D.2280>;
+  <D.2280>:;
+  return 1;
+}
+return 0;
+

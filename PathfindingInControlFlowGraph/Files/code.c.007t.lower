@@ -1,0 +1,75 @@
+
+;; Function main (main, funcdef_no=14, decl_uid=2271, cgraph_uid=14, symbol_order=14)
+
+main ()
+{
+  int largest;
+  int tmp;
+  int last;
+  int first;
+  int T[5];
+  int D.2297;
+  int D.2295;
+  int D.2294;
+  int D.2291;
+  int D.2290;
+  int D.2287;
+  int D.2286;
+  int D.2285;
+  int D.2282;
+
+  try
+    {
+      T[0] = 1;
+      T[1] = 2;
+      T[2] = 3;
+      T[3] = 4;
+      T[4] = 5;
+      first = 1;
+      last = 4;
+      D.2282 = first * 2;
+      largest = D.2282 + 1;
+      goto <D.2279>;
+      <D.2278>:
+      if (largest < last) goto <D.2283>; else goto <D.2284>;
+      <D.2283>:
+      D.2285 = T[largest];
+      D.2286 = largest + 1;
+      D.2287 = T[D.2286];
+      if (D.2285 < D.2287) goto <D.2288>; else goto <D.2289>;
+      <D.2288>:
+      largest = largest + 1;
+      <D.2289>:
+      <D.2284>:
+      D.2290 = T[first];
+      D.2291 = T[largest];
+      if (D.2290 < D.2291) goto <D.2292>; else goto <D.2293>;
+      <D.2292>:
+      tmp = T[first];
+      D.2294 = T[largest];
+      T[first] = D.2294;
+      T[largest] = tmp;
+      first = largest;
+      D.2295 = first * 2;
+      largest = D.2295 + 1;
+      goto <D.2296>;
+      <D.2293>:
+      largest = last + 1;
+      <D.2296>:
+      <D.2279>:
+      if (largest <= last) goto <D.2278>; else goto <D.2280>;
+      <D.2280>:
+      D.2297 = 1;
+      goto <D.2298>;
+    }
+  finally
+    {
+      T = {CLOBBER};
+    }
+  D.2297 = 0;
+  goto <D.2298>;
+  <D.2298>:
+  return D.2297;
+}
+
+
